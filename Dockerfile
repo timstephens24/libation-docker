@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/runtime:6.0
 
-LABEL maintainer="pixil98@gmail.com"
+LABEL maintainer="timstephens24@gmail.com"
 
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
