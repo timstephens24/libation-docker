@@ -25,7 +25,7 @@ chmod +x .build/LibationCli
 docker build -t ${DOCKER_USER}/libation:${LIBATION_VERSION} -t ${DOCKER_USER}/libation:latest --build-arg FOLDER_NAME=".build" .
 docker push ${DOCKER_USER}/libation:${LIBATION_VERSION}
 docker push ${DOCKER_USER}/libation:latest
-docker rmi mcr.microsoft.com/dotnet/runtime:6.0
+docker rmi mcr.microsoft.com/dotnet/runtime:7.0
 docker rmi ${DOCKER_USER}/libation:${LIBATION_VERSION}
 
 # Remove the leftover files
