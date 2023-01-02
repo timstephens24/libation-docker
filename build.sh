@@ -9,12 +9,12 @@ LIBATION_DOCKER="$(docker manifest inspect ${DOCKER_USER}/libation:${LIBATION_VE
 LIBATION_URL="https://github.com/rmcrackan/Libation/releases/download/${LIBATION_RELEASE}/Libation.${LIBATION_VERSION}-linux-chardonnay.tar.gz"
 
 # Test if version already exists
-if [[ -z ${LIBATION_DOCKER} ]]; then
-  echo "Missing this version. Updating latest and pushing the image for this release."
-else
-  echo "Already have this release. Quitting..."
-  exit
-fi
+#if [[ -z ${LIBATION_DOCKER} ]]; then
+#  echo "Missing this version. Updating latest and pushing the image for this release."
+#else
+#  echo "Already have this release. Quitting..."
+#  exit
+#fi
 
 # Get the zip and set up the environment
 #curl -o libation.zip -L "$LIBATION_URL"

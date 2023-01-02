@@ -15,5 +15,6 @@ RUN mkdir /data
 
 COPY ${FOLDER_NAME} /libation
 COPY liberate.sh .
+RUN chmod +x liberate.sh
 
 CMD ["./liberate.sh"]
