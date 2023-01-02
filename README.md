@@ -17,7 +17,8 @@ You'll need to change the following file paths:
 1. `Books` to `"/data"`
 2. `InProgress` to `"/tmp"`
 3. Under `Serilog.WriteTo.Args` set the `path` to `"/var/log/libation.log"`
-By default, Libation will run every 30 minutes. If you want to modify that time, pass in the environment variable `SLEEP_TIME` with however long you want to wait, i.e. `SLEEP_TIME=30m` for 30 minutes, `SLEEP_TIME=1h` for 1 hour, etc.
+
+By default, Libation will run every 30 minutes. If you want to modify that time, pass in the environment variable `SLEEP_TIME` with however long you want to wait, i.e. `SLEEP_TIME=30m` for 30 minutes, `SLEEP_TIME=1h` for 1 hour, etc. Here is an example run command:
 ```
 docker run -d \
   -v <path to copied config folder>:/config \
