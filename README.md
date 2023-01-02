@@ -12,17 +12,18 @@ The build script will check if your docker repo already has that version of Liba
 
 ## Running
 In order to run the container you will need an existing Libation configuration directory. The easiest way to obtain this is to run Libation and configure it through the gui.
-The config directory can be found from the gui by going to `Settings -> Settings -> Open log folder`. Make a copy of this folder and edit the `Settings.json` file. 
+The config directory can be found from the gui by going to `Settings -> Settings -> Open log folder`. Make a copy of this folder and edit the `Settings.json` file.
 You'll need to change the following file paths:
 1. `Books` to `"/data"`
 2. `InProgress` to `"/tmp"`
 3. Under `Serilog.WriteTo.Args` set the `path` to `"/var/log/libation.log"`
-
+By default, Libation will run every 30 minutes. If you want to modify that time, pass in the environment variable `SLEEP_TIME` with however long you want to wait, i.e. `SLEEP_TIME=30m` for 30 minutes, `SLEEP_TIME=1h` for 1 hour, etc.
 ```
 docker run -d \
   -v <path to copied config folder>:/config \
   -v <path to audiobook folder>:/data \
   --name libation \
+  -e SLEEP_TIME=30m \
   timstephens24/libation:latest
 ```
 
